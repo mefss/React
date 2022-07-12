@@ -11,7 +11,7 @@ class Session27 extends Component {
                 <h1>
                     شمارنده ی کلاسی من
                 </h1>
-                <Counter />
+                <Counter num1={6} num2={10} num3={15}/>
             </div>
         )
     }
