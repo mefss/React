@@ -11,7 +11,11 @@ class Session27 extends Component {
                 <h1>
                     شمارنده ی کلاسی من
                 </h1>
-                <Counter num1={6} num2={10} num3={15}/>
+                <Counter param1={2} param2={4} param3={6} defaultparam1 ={8}/>
+                <hr/>
+                <Counter param2={6} param3={9} defaultParam1={12}>
+                    شمارنده ی چیلدرن!!
+                </Counter>
             </div>
         )
     }

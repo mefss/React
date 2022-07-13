@@ -1,49 +1,62 @@
 import { Component } from "react";
 
-// class Counter extends Component {
-//     render() {
-//         const {num2} = this.props;
-//         const {num3} = this.props;
-//         return (
-//             <div>
-//                 <p>
-//                     شمارنده ی تصادفی کلاسی: {Math.floor(Math.random() * 1000)}
-//                 </p>
-//                 <p>
-//                     عدد اول من: {this.props.num1}
-//                 </p>
-//                 <p>
-//                     عدد دوم من: {num2}
-//                 </p>
-//                 <p>
-//                     عدد سوم من: {num3}
-//                 </p>
-//             </div>
-//         )
-//     }
-// }
+class Counter extends Component {
 
-const Counter = (props) => {
-    const { num2 } = props;
-    const { num3 } = props;
-    console.log(props);
-    return (
-    <div>
-        <p>
-            شمارنده ی تصادفی تابعی: {Math.floor(Math.random() * 1000)}
-        </p>
-        <p>
-            اول من: {props.num1}
-        </p>
-        <p>
-            دوم من: {num2}
-        </p>
-        <p>
-            سوم من: {num3}
-        </p>
-    </div>
-    )
+    static defaultProps = {
+        defaultParam3: 666
+    }
+
+    render() {
+        const { param2 } = this.props;
+        const { param3 } = this.props;
+        const { defaultParam3 } = this.props;
+        return (
+            <div>
+                <p>
+                    شمارنده ی تصادفی کلاسی: {Math.floor(Math.random() * 1000)}
+                </p>
+                {this.props.param1 ? <p>پارامتر اول من: {this.props.param1}</p> : ""}
+                <p>
+                    پارامتر دوم من: {param2}
+                </p>
+                <p>
+                    پارامتر سوم من: {param3}
+                </p>
+                <p>
+                    پارامتر پیش فرض اول: {this.props.defaultParam1}
+                </p>
+                <p>
+                    پارامتر پیش فرض دوم: {this.props.defaultParam2 || 1}
+                </p>
+                <p>
+                    پارامتر پیش فرض سوم: {defaultParam3}
+                </p>
+            </div>
+        )
+    }
 }
 
+// const Counter = (props) => {
+//     const { param2 } = props;
+//     const { param3 } = props;
+//     console.log(props);
+//     return (
+//         <div>
+//             <p>
+//                 شمارنده ی تصادفی تابعی: {Math.floor(Math.random() * 1000)}
+//             </p>
+//             {props.param1 ? <p>پارامتر اول من: {props.param1} </p> : ""}
+//             {param2 ? <p>پارامتر دوم من: {param2}</p> : ""}
+//             {param3 ? <p>پارامتر سوم من: {param3}</p> : ""}
+//             <p>{props.children}</p>
+//             <p>پارامتر پیش فرض اول: {props.defaultParam1}</p>
+//             <p>پارامتر پیش فرض دوم: {props.defaultParam2 || 1}</p>
+//         </div>
+//     )
+// }
+
+Counter.defaultProps = {
+    defaultParam1: 66
+}
 
 export default Counter;
