@@ -1,11 +1,10 @@
 import { Component } from "react";
 
-class Counter extends Component {
+class Props extends Component {
 
     static defaultProps = {
         defaultParam3: 666
     }
-
     render() {
         const { param2 } = this.props;
         const { param3 } = this.props;
@@ -13,7 +12,7 @@ class Counter extends Component {
         return (
             <div>
                 <p>
-                    شمارنده ی تصادفی کلاسی: {Math.floor(Math.random() * 1000)}
+                پارامتر تصادفی کلاسی: {Math.floor(Math.random() * 1000)}
                 </p>
                 {this.props.param1 ? <p>پارامتر اول من: {this.props.param1}</p> : ""}
                 <p>
@@ -36,14 +35,14 @@ class Counter extends Component {
     }
 }
 
-// const Counter = (props) => {
+// const propss = (props) => {
 //     const { param2 } = props;
 //     const { param3 } = props;
 //     console.log(props);
 //     return (
 //         <div>
 //             <p>
-//                 شمارنده ی تصادفی تابعی: {Math.floor(Math.random() * 1000)}
+//                 پارامتر تصادفی تابعی: {Math.floor(Math.random() * 1000)}
 //             </p>
 //             {props.param1 ? <p>پارامتر اول من: {props.param1} </p> : ""}
 //             {param2 ? <p>پارامتر دوم من: {param2}</p> : ""}
@@ -55,8 +54,8 @@ class Counter extends Component {
 //     )
 // }
 
-Counter.defaultProps = {
+Props.defaultProps = {
     defaultParam1: 66
 }
 
-export default Counter;
+export default Props;

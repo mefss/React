@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Session27 from './Session27';
+import MyProps from './MyProps';
+import MyState from './MyState';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Session27 />
+    {/* <MyProps /> */}
+    <MyState/>
   </React.StrictMode>
 );
 
