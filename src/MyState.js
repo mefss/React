@@ -19,11 +19,21 @@ const MyState = () => {
         <div className="center">
             <header>
                 <h1>
-                شمارنده ی من:
+                    شمارنده ی من
                 </h1>
             </header>
-            <p>{count}</p>
-            <button onClick={resetCount}>پاک کردن</button>
+            <p>
+                {count}
+            </p>
+            <p>
+                <button onClick={increaseCount}>اضافه کردن</button>
+            </p>
+            <p>
+                <button onClick={decreaseCount}>کم کردن</button>
+            </p>
+            <p>
+                <button onClick={resetCount}>پاک کردن</button>
+            </p>
         </div>
     )
 }

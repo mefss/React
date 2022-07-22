@@ -3,12 +3,24 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import MyProps from './MyProps';
 import MyState from './MyState';
+import MethodsInClassComponents from './MethodsInClassComponents'
+import PropsValidationByPropTypes from './PropsValidationByPropTypes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <MyProps /> */}
-    <MyState/>
+    <MyProps />
+    <hr />
+    <hr />
+    <MyState />
+    <hr />
+    <hr />
+    <MethodsInClassComponents />
+    <hr />
+    <hr />
+    <PropsValidationByPropTypes />
+    <hr />
+    <hr />
   </React.StrictMode>
 );
 
