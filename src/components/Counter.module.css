@@ -1,0 +1,13 @@
+.myButton {
+    background-color: 'green';
+     color: 'white' 
+}
+
+button:hover {
+    opacity: 100%;
+}
+
+button:disabled {
+    opacity: 50%;
+    background-color: gray !important;
+}

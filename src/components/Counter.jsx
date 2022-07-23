@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../style.css';
+import styles from './Counter.module.css';
+
 
 const Counter = ({ inc, dec, res, count }) => {
     return (
@@ -11,11 +12,11 @@ const Counter = ({ inc, dec, res, count }) => {
             <h1 style={count == 0 ? { color: 'blue' } : count > 0 ? { color: 'green' } : { color: 'red' }}>
                 {count}
             </h1>
-            <button onClick={inc}>+</button>
-            <button onClick={dec}>-</button>
+            <button className={styles.myButton} onClick={inc}>+</button>
+            <button onClick={dec} style={{ backgroundColor: 'red', color: 'white' }} disabled={count == 0}>-</button>
             <br />
             <br />
-            <button onClick={res}>RESET</button>
+            <button onClick={res} style={{ backgroundColor: 'blue', color: 'white' }}>RESET</button>
         </div>
     )
 }
